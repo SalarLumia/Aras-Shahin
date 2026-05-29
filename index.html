@@ -1,122 +1,210 @@
 <!DOCTYPE html>
 <html lang="fa" dir="rtl">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>ارس شاهین | ابزار صنعتی</title>
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="header">
-  <div class="header-left">
-    <div class="search-btn">🔍</div>
-
-    <div class="language-switcher">
-      <span>فارسی</span>
-      <span class="divider"></span>
-      <span>English</span>
-    </div>
+<header class="site-header">
+  <div class="logo-wrap">
+    <img src="assets/logo.png" alt="Aras Yonar Logo">
   </div>
 
-  <nav class="main-nav">
-    <a class="active" href="#">خانه</a>
-    <a href="#categories">محصولات</a>
+  <nav class="nav">
+    <a class="active" href="#">صفحه اصلی</a>
+    <a href="#products">محصولات</a>
+    <a href="#brands">برندها</a>
+    <a href="#">دانلود کاتالوگ</a>
     <a href="#">درباره ما</a>
     <a href="#contact">تماس با ما</a>
   </nav>
 
-  <div class="logo">
-    <div class="logo-mark">◆</div>
-    <div>
-      <strong>ARAS SHAHIN</strong>
-      <span>INDUSTRIAL TOOLS</span>
+  <div class="header-tools">
+    <button class="search-btn">⌕</button>
+    <div class="lang">
+      <span>ENGLISH</span>
+      <span>|</span>
+      <span>فارسی</span>
     </div>
   </div>
 </header>
 
 <section class="hero">
-  <div class="hero-content">
-    <span class="small-line"></span>
-    <p class="tag">تأمین ابزار صنعتی</p>
+  <img class="hero-img" src="assets/hero.jpg" alt="Industrial tools">
 
-    <h1>
-      قیمت به‌روز ابزارآلات صنعتی<br>
-      سریع، دقیق و منظم
-    </h1>
-
-    <p class="desc">
-      دسترسی آسان به دسته‌بندی محصولات، مشخصات فنی و قیمت‌های به‌روز برای مشتریان صنعتی.
-    </p>
+  <div class="hero-text">
+    <span class="red-line"></span>
+    <h1>ابزار دقیق،<br>عملکرد حرفه‌ای</h1>
+    <p>کیفیت برتر برای صنعت شما</p>
 
     <div class="hero-actions">
-      <a href="#categories" class="btn primary">مشاهده محصولات ←</a>
-      <a href="#" class="btn secondary">لیست قیمت 📄</a>
+      <a class="btn primary" href="#products">مشاهده محصولات</a>
+      <a class="btn outline" href="#">درباره ما</a>
     </div>
   </div>
 </section>
 
-<section class="features">
-  <div>
-    <span>🎧</span>
-    <strong>پشتیبانی تخصصی</strong>
-    <p>مشاوره و پاسخگویی سریع</p>
-  </div>
+<section id="brands" class="brands">
+  <h2>برندهای معتبر</h2>
+  <div class="section-line"></div>
 
-  <div>
-    <span>🚚</span>
-    <strong>ارسال سریع</strong>
-    <p>ارسال به سراسر کشور</p>
-  </div>
-
-  <div>
-    <span>⏱</span>
-    <strong>قیمت به‌روز</strong>
-    <p>به‌روزرسانی منظم قیمت‌ها</p>
-  </div>
-
-  <div>
-    <span>🛡</span>
-    <strong>کیفیت تضمینی</strong>
-    <p>محصولات اصلی با کیفیت</p>
+  <div class="brand-grid">
+    <div><img src="assets/brands/tnk.png" alt="TNK"></div>
+    <div><img src="assets/brands/yonar.png" alt="Yonar"></div>
+    <div><img src="assets/brands/universal.png" alt="Universal"></div>
+    <div><img src="assets/brands/ikto.png" alt="IKTO"></div>
+    <div><img src="assets/brands/vkto.png" alt="VKTO"></div>
   </div>
 </section>
 
-<section id="categories" class="section">
+<section class="categories" id="products">
   <h2>دسته‌بندی محصولات</h2>
+  <div class="section-line"></div>
 
   <div class="category-grid">
-    <div class="category-card drill">مته و سوراخکاری</div>
-    <div class="category-card tap">قلاویز و حدیده</div>
-    <div class="category-card measure">ابزار اندازه‌گیری</div>
-    <div class="category-card disc">صفحات برش و سایش</div>
-    <div class="category-card crane">تجهیزات کارگاهی و جرثقیل</div>
-    <div class="category-card fluid">روانکارها و آب‌صابون</div>
+    <div class="category-card">
+      <img src="assets/categories/drill.jpg" alt="">
+      <div class="icon">✂</div>
+      <h3>ابزار برش</h3>
+      <p>مته، قلاویز، حدیده و سایر ابزار برش</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/disc.jpg" alt="">
+      <div class="icon">✂</div>
+      <h3>صفحات برش و سایش</h3>
+      <p>صفحه برش، سایش، سرامیک ساب و سنباده</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/hoist.jpg" alt="">
+      <div class="icon">✂</div>
+      <h3>تجهیزات بالابری</h3>
+      <p>جرثقیل برقی، زنجیری و تجهیزات جابه‌جایی بار</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/oil.jpg" alt="">
+      <div class="icon">✂</div>
+      <h3>روغن و روانکار</h3>
+      <p>روغن برش، روغن صنعتی و گریس</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/measuring.jpg" alt="">
+      <div class="icon">✂</div>
+      <h3>ابزار دستی و اندازه‌گیری</h3>
+      <p>ابزار دستی، اندازه‌گیری و کنترل کیفیت</p>
+    </div>
   </div>
 </section>
 
-<section class="social">
-  <h2>ما را در شبکه‌های اجتماعی دنبال کنید</h2>
+<section class="featured">
+  <h2>محصولات پرطرفدار</h2>
+  <div class="section-line"></div>
 
-  <div class="social-links">
-    <a href="#">Instagram</a>
-    <a href="#">LinkedIn</a>
-    <a href="#">Telegram</a>
-    <a href="#">YouTube</a>
+  <div class="product-grid">
+    <button class="arrow">‹</button>
+
+    <div class="product-card">
+      <img src="assets/products/oil.jpg" alt="">
+      <h3>روغن سولوبل برش<br>YONAR</h3>
+      <a href="#">مشاهده محصول</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/products/flap-disc.jpg" alt="">
+      <h3>صفحه برش YONAR<br>230x3x22</h3>
+      <a href="#">مشاهده محصول</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/products/drill-bit.jpg" alt="">
+      <h3>مته ته گرد ۵٪ کبالت<br>YONAR</h3>
+      <a href="#">مشاهده محصول</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/products/tap.jpg" alt="">
+      <h3>قلاویز ماشینی<br>YONAR</h3>
+      <a href="#">مشاهده محصول</a>
+    </div>
+
+    <div class="product-card">
+      <img src="assets/products/hoist.jpg" alt="">
+      <h3>جرثقیل برقی زنجیری<br>IKTO</h3>
+      <a href="#">مشاهده محصول</a>
+    </div>
+
+    <button class="arrow">›</button>
   </div>
 </section>
 
-<footer id="contact" class="footer">
+<section class="services">
   <div>
-    <strong>ارس شاهین</strong>
-    <p>تأمین‌کننده ابزارآلات و تجهیزات صنعتی</p>
+    <span>🎧</span>
+    <h3>مشاوره تخصصی</h3>
+    <p>تیم فنی مجرب در کنار شما</p>
+  </div>
+  <div>
+    <span>🛡</span>
+    <h3>ضمانت اصالت کالا</h3>
+    <p>تضمین کیفیت تمامی محصولات</p>
+  </div>
+  <div>
+    <span>🚚</span>
+    <h3>ارسال سریع</h3>
+    <p>به سراسر کشور</p>
+  </div>
+  <div>
+    <span>👥</span>
+    <h3>پشتیبانی مداوم</h3>
+    <p>پاسخگو و همراه شما</p>
+  </div>
+</section>
+
+<footer class="footer" id="contact">
+  <div>
+    <h3>اطلاعات تماس</h3>
+    <p>021-12365678</p>
+    <p>info@arasyonar.com</p>
+    <p>تهران، خیابان خیام جنوبی، کوچه صنعتی، پلاک 12</p>
   </div>
 
   <div>
-    <p>آدرس دفتر مرکزی: تهران، شادآباد</p>
-    <p>تماس: 000000000</p>
+    <h3>دسته‌بندی محصولات</h3>
+    <p>ابزار برش</p>
+    <p>صفحات برش و سایش</p>
+    <p>تجهیزات بالابری</p>
+    <p>روغن و روانکار</p>
+    <p>ابزار دستی و اندازه‌گیری</p>
+  </div>
+
+  <div>
+    <h3>دسترسی سریع</h3>
+    <p>صفحه اصلی</p>
+    <p>محصولات</p>
+    <p>برندها</p>
+    <p>درباره ما</p>
+    <p>تماس با ما</p>
+  </div>
+
+  <div>
+    <h3>درباره ما</h3>
+    <p>
+      ارس شاهین با سال‌ها تجربه در زمینه تأمین و واردات ابزارآلات صنعتی،
+      همواره در تلاش است بهترین محصولات را با کیفیت تضمینی ارائه دهد.
+    </p>
+    <div class="socials">in ○ ◎ ◌</div>
   </div>
 </footer>
+
+<div class="copyright">
+  کلیه حقوق برای ارس شاهین محفوظ است © 2025
+</div>
 
 </body>
 </html>
