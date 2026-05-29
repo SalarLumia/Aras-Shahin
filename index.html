@@ -9,79 +9,85 @@
 <body>
 
 <header class="header">
-  <div class="logo">ARAS SHAHIN</div>
+  <div class="logo">
+    <div class="logo-mark">◆</div>
+    <div>
+      <strong>ARAS SHAHIN</strong>
+      <span>INDUSTRIAL TOOLS</span>
+    </div>
+  </div>
+
   <nav>
-    <a href="#">خانه</a>
+    <a class="active" href="#">خانه</a>
     <a href="#categories">محصولات</a>
-    <a href="#price-list">لیست قیمت</a>
-    <a href="#contact">تماس</a>
+    <a href="#">لیست قیمت</a>
+    <a href="#">درباره ما</a>
+    <a href="#contact">تماس با ما</a>
   </nav>
-  <button class="cart-btn">سبد خرید</button>
+
+  <button class="cart-btn">سبد خرید 🛒</button>
 </header>
 
 <section class="hero">
-  <div>
-    <span class="tag">تأمین ابزار صنعتی</span>
-    <h1>قیمت به‌روز ابزارآلات صنعتی، سریع و منظم</h1>
-    <p>
-      مشاهده دسته‌بندی محصولات، مشخصات فنی و قیمت‌های به‌روز برای مشتریان صنعتی.
+  <div class="hero-content">
+    <span class="small-line"></span>
+    <p class="tag">تأمین ابزار صنعتی</p>
+    <h1>قیمت به‌روز ابزارآلات صنعتی<br>سریع، دقیق و منظم</h1>
+    <p class="desc">
+      دسترسی آسان به دسته‌بندی محصولات، مشخصات فنی و قیمت‌های به‌روز برای مشتریان صنعتی.
     </p>
+
     <div class="hero-actions">
-      <a href="#categories" class="btn primary">مشاهده محصولات</a>
-      <a href="#price-list" class="btn secondary">لیست قیمت نمونه</a>
+      <a href="#categories" class="btn primary">مشاهده محصولات ←</a>
+      <a href="#" class="btn secondary">لیست قیمت 📄</a>
     </div>
+  </div>
+</section>
+
+<section class="features">
+  <div>
+    <span>🎧</span>
+    <strong>پشتیبانی تخصصی</strong>
+    <p>مشاوره و پاسخگویی سریع</p>
+  </div>
+  <div>
+    <span>🚚</span>
+    <strong>ارسال سریع</strong>
+    <p>ارسال به سراسر کشور</p>
+  </div>
+  <div>
+    <span>⏱</span>
+    <strong>قیمت به‌روز</strong>
+    <p>به‌روزرسانی منظم قیمت‌ها</p>
+  </div>
+  <div>
+    <span>🛡</span>
+    <strong>کیفیت تضمینی</strong>
+    <p>محصولات اصلی با کیفیت</p>
   </div>
 </section>
 
 <section id="categories" class="section">
   <h2>دسته‌بندی محصولات</h2>
-  <div class="grid">
-    <div class="card">مته و سوراخکاری</div>
-    <div class="card">قلاویز و حدیده</div>
-    <div class="card">ابزار اندازه‌گیری</div>
-    <div class="card">صفحات برش و سایش</div>
-    <div class="card">تجهیزات کارگاهی و جرثقیل</div>
-    <div class="card">روانکارها و آب‌صابون</div>
+
+  <div class="category-grid">
+    <div class="category-card drill">مته و سوراخکاری</div>
+    <div class="category-card tap">قلاویز و حدیده</div>
+    <div class="category-card measure">ابزار اندازه‌گیری</div>
+    <div class="category-card disc">صفحات برش و سایش</div>
+    <div class="category-card crane">تجهیزات کارگاهی و جرثقیل</div>
+    <div class="category-card fluid">روانکارها و آب‌صابون</div>
   </div>
 </section>
 
-<section id="price-list" class="section gray">
-  <h2>نمونه صفحه محصول: مته تهگرد ۵٪ کبالت</h2>
-
-  <table>
-    <thead>
-      <tr>
-        <th>سایز</th>
-        <th>برند</th>
-        <th>واحد</th>
-        <th>قیمت</th>
-        <th>عملیات</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr>
-        <td>6 mm</td>
-        <td>IKTO</td>
-        <td>عدد</td>
-        <td>تماس بگیرید</td>
-        <td><button>افزودن به سبد</button></td>
-      </tr>
-      <tr>
-        <td>8 mm</td>
-        <td>IKTO</td>
-        <td>عدد</td>
-        <td>تماس بگیرید</td>
-        <td><button>افزودن به سبد</button></td>
-      </tr>
-      <tr>
-        <td>10 mm</td>
-        <td>IKTO</td>
-        <td>عدد</td>
-        <td>تماس بگیرید</td>
-        <td><button>افزودن به سبد</button></td>
-      </tr>
-    </tbody>
-  </table>
+<section class="social">
+  <h2>Aras Shahin on social media</h2>
+  <div class="social-links">
+    <a href="#">Instagram</a>
+    <a href="#">LinkedIn</a>
+    <a href="#">Telegram</a>
+    <a href="#">YouTube</a>
+  </div>
 </section>
 
 <footer id="contact" class="footer">
@@ -90,8 +96,8 @@
     <p>تأمین‌کننده ابزارآلات و تجهیزات صنعتی</p>
   </div>
   <div>
+    <p>آدرس دفتر مرکزی: تهران، شادآباد</p>
     <p>تماس: 000000000</p>
-    <p>آدرس: —</p>
   </div>
 </footer>
 
