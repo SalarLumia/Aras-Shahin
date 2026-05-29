@@ -9,25 +9,29 @@
 <body>
 
 <header class="site-header">
-  <div class="logo-wrap">
-    <img src="assets/logo.png" alt="Aras Yonar Logo">
-  </div>
+  <a class="logo-wrap" href="#">
+    <img src="assets/logo.png" alt="Aras Shahin Logo">
+  </a>
 
   <nav class="nav">
     <a class="active" href="#">صفحه اصلی</a>
     <a href="#products">محصولات</a>
-    <a href="#brands">برندها</a>
-    <a href="#">دانلود کاتالوگ</a>
     <a href="#">درباره ما</a>
     <a href="#contact">تماس با ما</a>
   </nav>
 
   <div class="header-tools">
-    <button class="search-btn">⌕</button>
+    <div class="search-box">
+      <button aria-label="search">⌕</button>
+      <input type="text" placeholder="جستجو در محصولات..." />
+    </div>
+
+    <a class="header-icon" href="#" aria-label="cart">🛒</a>
+    <a class="header-icon" href="#" aria-label="profile">👤</a>
+
     <div class="lang">
-      <span>ENGLISH</span>
-      <span>|</span>
-      <span>فارسی</span>
+      <span class="active-lang">فارسی</span>
+      <span>EN</span>
     </div>
   </div>
 </header>
@@ -40,23 +44,7 @@
     <h1>ابزار دقیق،<br>عملکرد حرفه‌ای</h1>
     <p>کیفیت برتر برای صنعت شما</p>
 
-    <div class="hero-actions">
-      <a class="btn primary" href="#products">مشاهده محصولات</a>
-      <a class="btn outline" href="#">درباره ما</a>
-    </div>
-  </div>
-</section>
-
-<section id="brands" class="brands">
-  <h2>برندهای معتبر</h2>
-  <div class="section-line"></div>
-
-  <div class="brand-grid">
-    <div><img src="assets/brands/tnk.png" alt="TNK"></div>
-    <div><img src="assets/brands/yonar.png" alt="Yonar"></div>
-    <div><img src="assets/brands/universal.png" alt="Universal"></div>
-    <div><img src="assets/brands/ikto.png" alt="IKTO"></div>
-    <div><img src="assets/brands/vkto.png" alt="VKTO"></div>
+    <a class="btn primary" href="#products">محصولات</a>
   </div>
 </section>
 
@@ -66,44 +54,58 @@
 
   <div class="category-grid">
     <div class="category-card">
-      <img src="assets/categories/drill.jpg" alt="">
-      <div class="icon">✂</div>
-      <h3>ابزار برش</h3>
-      <p>مته، قلاویز، حدیده و سایر ابزار برش</p>
+      <img src="assets/categories/drilling.jpg" alt="">
+      <div class="icon">⌁</div>
+      <h3>مته و ابزار سوراخکاری</h3>
+      <p>مته کونیک، مته ته‌گرد، مته کبالت و ابزار خزینه‌کاری</p>
     </div>
 
     <div class="category-card">
-      <img src="assets/categories/disc.jpg" alt="">
-      <div class="icon">✂</div>
-      <h3>صفحات برش و سایش</h3>
-      <p>صفحه برش، سایش، سرامیک ساب و سنباده</p>
-    </div>
-
-    <div class="category-card">
-      <img src="assets/categories/hoist.jpg" alt="">
-      <div class="icon">✂</div>
-      <h3>تجهیزات بالابری</h3>
-      <p>جرثقیل برقی، زنجیری و تجهیزات جابه‌جایی بار</p>
-    </div>
-
-    <div class="category-card">
-      <img src="assets/categories/oil.jpg" alt="">
-      <div class="icon">✂</div>
-      <h3>روغن و روانکار</h3>
-      <p>روغن برش، روغن صنعتی و گریس</p>
+      <img src="assets/categories/threading.jpg" alt="">
+      <div class="icon">⌘</div>
+      <h3>قلاویز و حدیده</h3>
+      <p>قلاویز دستی، قلاویز تکرو، حدیده، دسته قلاویز و نپیچه</p>
     </div>
 
     <div class="category-card">
       <img src="assets/categories/measuring.jpg" alt="">
-      <div class="icon">✂</div>
-      <h3>ابزار دستی و اندازه‌گیری</h3>
-      <p>ابزار دستی، اندازه‌گیری و کنترل کیفیت</p>
+      <div class="icon">⌖</div>
+      <h3>ابزار اندازه‌گیری</h3>
+      <p>انواع کولیس و لوازم اندازه‌گیری صنعتی</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/cutting-disc.jpg" alt="">
+      <div class="icon">✦</div>
+      <h3>صفحات برش و سایش</h3>
+      <p>فلاپ دیسک، صفحه برش، صفحه سایش، گرانیت‌بر و سرامیک‌بر</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/sawing.jpg" alt="">
+      <div class="icon">▣</div>
+      <h3>اره‌کاری و نگهدارنده</h3>
+      <p>تیغ اره لنگ، تیغ اره نواری، سه‌نظام دستگاه و سه‌نظام دریل</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/workshop.jpg" alt="">
+      <div class="icon">⚙</div>
+      <h3>تجهیزات کارگاهی و جرثقیل</h3>
+      <p>لیفت مگنت، جرثقیل باسکول و جرثقیل سقفی</p>
+    </div>
+
+    <div class="category-card">
+      <img src="assets/categories/fluids.jpg" alt="">
+      <div class="icon">◌</div>
+      <h3>روانکارها و سیالات صنعتی</h3>
+      <p>محلول آب‌صابون، آب‌صابون ویژه و سیالات صنعتی</p>
     </div>
   </div>
 </section>
 
 <section class="featured">
-  <h2>محصولات پرطرفدار</h2>
+  <h2>محصولات پرفروش</h2>
   <div class="section-line"></div>
 
   <div class="product-grid">
@@ -123,7 +125,7 @@
 
     <div class="product-card">
       <img src="assets/products/drill-bit.jpg" alt="">
-      <h3>مته ته گرد ۵٪ کبالت<br>YONAR</h3>
+      <h3>مته ته‌گرد ۵٪ کبالت<br>YONAR</h3>
       <a href="#">مشاهده محصول</a>
     </div>
 
@@ -145,24 +147,27 @@
 
 <section class="services">
   <div>
-    <span>🎧</span>
+    <img src="assets/service-icons/consulting.svg" alt="">
     <h3>مشاوره تخصصی</h3>
     <p>تیم فنی مجرب در کنار شما</p>
   </div>
+
   <div>
-    <span>🛡</span>
+    <img src="assets/service-icons/authenticity.svg" alt="">
     <h3>ضمانت اصالت کالا</h3>
     <p>تضمین کیفیت تمامی محصولات</p>
   </div>
+
   <div>
-    <span>🚚</span>
+    <img src="assets/service-icons/delivery.svg" alt="">
     <h3>ارسال سریع</h3>
-    <p>به سراسر کشور</p>
+    <p>ارسال به سراسر کشور</p>
   </div>
+
   <div>
-    <span>👥</span>
-    <h3>پشتیبانی مداوم</h3>
-    <p>پاسخگو و همراه شما</p>
+    <img src="assets/service-icons/money-back.svg" alt="">
+    <h3>ضمانت بازگشت وجه</h3>
+    <p>خرید مطمئن و بدون ریسک</p>
   </div>
 </section>
 
@@ -176,18 +181,17 @@
 
   <div>
     <h3>دسته‌بندی محصولات</h3>
-    <p>ابزار برش</p>
+    <p>مته و ابزار سوراخکاری</p>
+    <p>قلاویز و حدیده</p>
+    <p>ابزار اندازه‌گیری</p>
     <p>صفحات برش و سایش</p>
-    <p>تجهیزات بالابری</p>
-    <p>روغن و روانکار</p>
-    <p>ابزار دستی و اندازه‌گیری</p>
+    <p>روانکارها و سیالات صنعتی</p>
   </div>
 
   <div>
     <h3>دسترسی سریع</h3>
     <p>صفحه اصلی</p>
     <p>محصولات</p>
-    <p>برندها</p>
     <p>درباره ما</p>
     <p>تماس با ما</p>
   </div>
@@ -198,7 +202,6 @@
       ارس شاهین با سال‌ها تجربه در زمینه تأمین و واردات ابزارآلات صنعتی،
       همواره در تلاش است بهترین محصولات را با کیفیت تضمینی ارائه دهد.
     </p>
-    <div class="socials">in ○ ◎ ◌</div>
   </div>
 </footer>
 
