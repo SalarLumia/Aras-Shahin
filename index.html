@@ -9,12 +9,11 @@
 <body>
 
 <header class="site-header">
-  <a class="logo-wrap" href="#">
+  <a class="logo-wrap" href="index.html">
     <img src="assets/logo.png" alt="Aras Shahin Logo">
   </a>
 
   <nav class="nav">
-    <a class="active" href="#">صفحه اصلی</a>
     <a href="#products">محصولات</a>
     <a href="#">درباره ما</a>
     <a href="#contact">تماس با ما</a>
@@ -26,8 +25,13 @@
       <input type="text" placeholder="جستجو در محصولات..." />
     </div>
 
-    <a class="header-icon" href="#" aria-label="cart">🛒</a>
-    <a class="header-icon" href="#" aria-label="profile">👤</a>
+    <a class="header-icon" href="#" aria-label="cart">
+      <img src="assets/header-icons/cart.svg" alt="">
+    </a>
+
+    <a class="header-icon" href="#" aria-label="profile">
+      <img src="assets/header-icons/user.svg" alt="">
+    </a>
 
     <div class="lang">
       <span class="active-lang">فارسی</span>
@@ -53,54 +57,70 @@
   <div class="section-line"></div>
 
   <div class="category-grid">
+
     <div class="category-card">
       <img src="assets/categories/drilling.jpg" alt="">
-      <div class="icon">⌁</div>
-      <h3>مته و ابزار سوراخکاری</h3>
-      <p>مته کونیک، مته ته‌گرد، مته کبالت و ابزار خزینه‌کاری</p>
+      <div class="category-content">
+        <div class="icon">⌁</div>
+        <h3>مته و ابزار سوراخکاری</h3>
+        <p>مته کونیک، مته ته‌گرد، مته کبالت، مته بلند و ابزار خزینه‌کاری</p>
+      </div>
     </div>
 
     <div class="category-card">
       <img src="assets/categories/threading.jpg" alt="">
-      <div class="icon">⌘</div>
-      <h3>قلاویز و حدیده</h3>
-      <p>قلاویز دستی، قلاویز تکرو، حدیده، دسته قلاویز و نپیچه</p>
+      <div class="category-content">
+        <div class="icon">⌘</div>
+        <h3>قلاویز و حدیده</h3>
+        <p>قلاویز دستی، قلاویز تکرو، حدیده، دسته قلاویز و نپیچه</p>
+      </div>
     </div>
 
     <div class="category-card">
       <img src="assets/categories/measuring.jpg" alt="">
-      <div class="icon">⌖</div>
-      <h3>ابزار اندازه‌گیری</h3>
-      <p>انواع کولیس و لوازم اندازه‌گیری صنعتی</p>
+      <div class="category-content">
+        <div class="icon">⌖</div>
+        <h3>لوازم اندازه‌گیری</h3>
+        <p>انواع کولیس، ابزار کنترل ابعادی و تجهیزات اندازه‌گیری صنعتی</p>
+      </div>
     </div>
 
     <div class="category-card">
       <img src="assets/categories/cutting-disc.jpg" alt="">
-      <div class="icon">✦</div>
-      <h3>صفحات برش و سایش</h3>
-      <p>فلاپ دیسک، صفحه برش، صفحه سایش، گرانیت‌بر و سرامیک‌بر</p>
+      <div class="category-content">
+        <div class="icon">✦</div>
+        <h3>صفحات برش و سایش</h3>
+        <p>فلاپ دیسک، صفحه برش، صفحه سایش، گرانیت‌بر و سرامیک‌بر</p>
+      </div>
     </div>
 
     <div class="category-card">
       <img src="assets/categories/sawing.jpg" alt="">
-      <div class="icon">▣</div>
-      <h3>اره‌کاری و نگهدارنده</h3>
-      <p>تیغ اره لنگ، تیغ اره نواری، سه‌نظام دستگاه و سه‌نظام دریل</p>
+      <div class="category-content">
+        <div class="icon">▣</div>
+        <h3>اره‌کاری و نگهدارنده</h3>
+        <p>تیغ اره لنگ، تیغ اره نواری، سه‌نظام دستگاه و سه‌نظام دریل</p>
+      </div>
     </div>
 
     <div class="category-card">
       <img src="assets/categories/workshop.jpg" alt="">
-      <div class="icon">⚙</div>
-      <h3>تجهیزات کارگاهی و جرثقیل</h3>
-      <p>لیفت مگنت، جرثقیل باسکول و جرثقیل سقفی</p>
+      <div class="category-content">
+        <div class="icon">⚙</div>
+        <h3>تجهیزات کارگاهی و جرثقیل</h3>
+        <p>لیفت مگنت، جرثقیل باسکول، جرثقیل زنجیری و جرثقیل سقفی</p>
+      </div>
     </div>
 
-    <div class="category-card">
+    <div class="category-card wide">
       <img src="assets/categories/fluids.jpg" alt="">
-      <div class="icon">◌</div>
-      <h3>روانکارها و سیالات صنعتی</h3>
-      <p>محلول آب‌صابون، آب‌صابون ویژه و سیالات صنعتی</p>
+      <div class="category-content">
+        <div class="icon">◌</div>
+        <h3>روانکارها و سیالات صنعتی</h3>
+        <p>محلول آب‌صابون، آب‌صابون ویژه، روغن برش و سیالات صنعتی</p>
+      </div>
     </div>
+
   </div>
 </section>
 
@@ -183,14 +203,13 @@
     <h3>دسته‌بندی محصولات</h3>
     <p>مته و ابزار سوراخکاری</p>
     <p>قلاویز و حدیده</p>
-    <p>ابزار اندازه‌گیری</p>
+    <p>لوازم اندازه‌گیری</p>
     <p>صفحات برش و سایش</p>
     <p>روانکارها و سیالات صنعتی</p>
   </div>
 
   <div>
     <h3>دسترسی سریع</h3>
-    <p>صفحه اصلی</p>
     <p>محصولات</p>
     <p>درباره ما</p>
     <p>تماس با ما</p>
