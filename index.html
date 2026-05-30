@@ -14,8 +14,10 @@
   </a>
 
   <nav class="nav">
-    <div class="nav-item products-menu">
-      <a href="#products">محصولات</a>
+    <div class="nav-item products-menu" id="productsMenu">
+  <button class="products-toggle" type="button" id="productsToggle">
+    محصولات
+  </button>
 
       <div class="dropdown-menu">
         <a href="#products">مته و ابزار سوراخکاری</a>
@@ -32,16 +34,27 @@
   </nav>
 
   <div class="header-actions">
-    <a class="header-icon" href="#" aria-label="Cart">
-      <img src="assets-new/header-icons/cart.svg" alt="Cart" />
-    </a>
+<a class="header-icon profile-icon" href="#" aria-label="Profile">
 
-    <span class="header-divider"></span>
+<svg class="header-svg-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <circle cx="14" cy="8.8" r="3.8" stroke="currentColor" stroke-width="1.8"/>
+  <path d="M6.5 23C7.2 18.7 10.2 16.5 14 16.5C17.8 16.5 20.8 18.7 21.5 23" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+</svg>
 
-    <a class="header-icon profile-icon" href="#" aria-label="Profile">
-      <img src="assets-new/header-icons/user.svg" alt="User" />
-    </a>
-  </div>
+</a>
+  <span class="user-greeting" id="userGreeting"></span>
+
+  <span class="header-divider"></span>
+
+<a class="header-icon" href="#" aria-label="Cart">
+  <svg class="header-svg-icon" width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <path d="M6.2 8.2H22L20.5 17.5H8L6.2 8.2Z" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round"/>
+    <path d="M6.2 8.2L5.6 5.2H3.5" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"/>
+    <circle cx="10" cy="22" r="1.6" fill="currentColor"/>
+    <circle cx="19" cy="22" r="1.6" fill="currentColor"/>
+  </svg>
+</a>
+</div>
 </header>
 <section class="hero-slider">
   <div class="hero-text-panel">

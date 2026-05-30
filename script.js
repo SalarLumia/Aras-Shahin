@@ -69,3 +69,33 @@ setInterval(() => {
 }, intervalTime);
 
 showSlide(0);
+
+const userFirstName = "علی";
+const maxNameLength = 12;
+
+const displayName =
+  userFirstName.length <= maxNameLength ? userFirstName : "کاربر";
+
+const userGreeting = document.getElementById("userGreeting");
+
+if (userGreeting) {
+  userGreeting.textContent = `${displayName} عزیز! خوش آمدید.`;
+}
+const productsMenu = document.getElementById("productsMenu");
+const productsToggle = document.getElementById("productsToggle");
+
+if (productsMenu && productsToggle) {
+  productsToggle.addEventListener("click", function (event) {
+    event.preventDefault();
+    event.stopPropagation();
+    productsMenu.classList.toggle("open");
+  });
+
+  productsMenu.addEventListener("click", function (event) {
+    event.stopPropagation();
+  });
+
+  document.addEventListener("click", function () {
+    productsMenu.classList.remove("open");
+  });
+}
