@@ -159,16 +159,29 @@ body {
   grid-template-columns: 45% 55%;
   direction: ltr;
   overflow: hidden;
-  background: #fff;
+  background: #111;
 }
 
 .hero-text-panel {
   position: relative;
   background: var(--panel);
-  overflow: hidden;
+  overflow: visible;
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  z-index: 3;
+}
+
+.hero-text-panel::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: -135px;
+  width: 260px;
+  height: 100%;
+  background: var(--panel);
+  transform: skewX(-17deg);
+  z-index: 1;
 }
 
 .hero-content {
@@ -181,42 +194,23 @@ body {
 
 .hero-pattern {
   position: absolute;
-  inset: 0;
+  top: 0;
+  right: -150px;
+  bottom: 0;
+  left: 0;
   overflow: hidden;
   pointer-events: none;
-  opacity: 0.9;
-  background-image:
-    repeating-linear-gradient(
-      135deg,
-      rgba(255,255,255,0.65) 0px,
-      rgba(255,255,255,0.65) 2px,
-      transparent 2px,
-      transparent 18px
-    );
-}
-
-.hero-pattern::before {
-  content: "";
-  position: absolute;
-  inset: -30%;
-  background-image:
-    repeating-linear-gradient(
-      135deg,
-      rgba(214,0,0,0.08) 0px,
-      rgba(214,0,0,0.08) 1px,
-      transparent 1px,
-      transparent 28px
-    );
-  animation: technicalLines 26s linear infinite;
+  z-index: 2;
+  clip-path: polygon(0 0, 100% 0, calc(100% - 130px) 100%, 0 100%);
 }
 
 .hero-pattern span {
   position: absolute;
   width: 5px;
   height: 5px;
-  background: rgba(214,0,0,0.45);
+  background: rgba(214, 0, 0, 0.35);
   border-radius: 50%;
-  box-shadow: 0 0 14px rgba(214,0,0,0.28);
+  box-shadow: 0 0 18px rgba(214, 0, 0, 0.25);
   animation: particleMove 18s ease-in-out infinite alternate;
 }
 
@@ -225,32 +219,27 @@ body {
 .hero-pattern span:nth-child(3) { top: 48%; right: 32%; animation-duration: 19s; }
 .hero-pattern span:nth-child(4) { top: 68%; right: 58%; animation-duration: 24s; }
 .hero-pattern span:nth-child(5) { top: 82%; right: 20%; animation-duration: 20s; }
-.hero-pattern span:nth-child(6) { top: 18%; right: 45%; animation-duration: 27s; background: rgba(0,0,0,0.18); }
-.hero-pattern span:nth-child(7) { top: 38%; right: 12%; animation-duration: 21s; background: rgba(0,0,0,0.16); }
-.hero-pattern span:nth-child(8) { top: 56%; right: 78%; animation-duration: 25s; background: rgba(0,0,0,0.14); }
-.hero-pattern span:nth-child(9) { top: 74%; right: 40%; animation-duration: 18s; background: rgba(0,0,0,0.16); }
+.hero-pattern span:nth-child(6) { top: 18%; right: 45%; animation-duration: 27s; background: rgba(0,0,0,0.16); }
+.hero-pattern span:nth-child(7) { top: 38%; right: 12%; animation-duration: 21s; background: rgba(0,0,0,0.14); }
+.hero-pattern span:nth-child(8) { top: 56%; right: 78%; animation-duration: 25s; background: rgba(0,0,0,0.12); }
+.hero-pattern span:nth-child(9) { top: 74%; right: 40%; animation-duration: 18s; background: rgba(0,0,0,0.14); }
 .hero-pattern span:nth-child(10) { top: 30%; right: 88%; animation-duration: 23s; }
 .hero-pattern span:nth-child(11) { top: 62%; right: 8%; animation-duration: 28s; }
 .hero-pattern span:nth-child(12) { top: 88%; right: 72%; animation-duration: 17s; }
 
-@keyframes technicalLines {
-  from { transform: translate(-80px, -80px); }
-  to { transform: translate(80px, 80px); }
-}
-
 @keyframes particleMove {
   0% {
-    transform: translate(0, 0) scale(0.8);
-    opacity: 0.25;
+    transform: translate(0, 0) scale(0.75);
+    opacity: 0.18;
   }
 
   50% {
-    opacity: 0.75;
+    opacity: 0.65;
   }
 
   100% {
-    transform: translate(-90px, 65px) scale(1.35);
-    opacity: 0.35;
+    transform: translate(-120px, 80px) scale(1.4);
+    opacity: 0.3;
   }
 }
 
@@ -292,18 +281,7 @@ body {
   position: relative;
   overflow: hidden;
   background: #111;
-}
-
-.hero-image-panel::before {
-  content: "";
-  position: absolute;
-  left: -110px;
-  top: 0;
-  width: 230px;
-  height: 100%;
-  background: var(--panel);
-  transform: skewX(-18deg);
-  z-index: 2;
+  z-index: 1;
 }
 
 .hero-image-panel img {
@@ -584,6 +562,16 @@ h2 {
 
   .hero-text-panel {
     min-height: 460px;
+    overflow: hidden;
+  }
+
+  .hero-text-panel::after {
+    display: none;
+  }
+
+  .hero-pattern {
+    right: 0;
+    clip-path: none;
   }
 
   .hero-content {
@@ -596,10 +584,6 @@ h2 {
 
   .hero-image-panel {
     height: 360px;
-  }
-
-  .hero-image-panel::before {
-    display: none;
   }
 
   .category-grid,
