@@ -176,44 +176,59 @@ body {
   position: absolute;
   inset: 0;
   overflow: hidden;
-  opacity: 0.75;
-}
-
-.hero-pattern::before,
-.hero-pattern::after {
-  content: "";
-  position: absolute;
-  width: 140%;
-  height: 140%;
-  top: -20%;
-  left: -20%;
+  pointer-events: none;
+  opacity: 0.9;
   background-image:
     repeating-linear-gradient(
       135deg,
-      rgba(255,255,255,0.85) 0px,
-      rgba(255,255,255,0.85) 2px,
+      rgba(255,255,255,0.65) 0px,
+      rgba(255,255,255,0.65) 2px,
       transparent 2px,
-      transparent 14px
+      transparent 18px
     );
-  transform: rotate(0deg);
-  animation: lineFlow 18s linear infinite;
 }
 
-.hero-pattern::after {
-  opacity: 0.45;
+.hero-pattern::before {
+  content: "";
+  position: absolute;
+  inset: -30%;
   background-image:
     repeating-linear-gradient(
       135deg,
       rgba(214,0,0,0.08) 0px,
       rgba(214,0,0,0.08) 1px,
       transparent 1px,
-      transparent 22px
+      transparent 28px
     );
-  animation-duration: 28s;
-  animation-direction: reverse;
+  animation: technicalLines 26s linear infinite;
 }
 
-@keyframes lineFlow {
+.hero-pattern span {
+  position: absolute;
+  width: 5px;
+  height: 5px;
+  background: rgba(214,0,0,0.45);
+  border-radius: 50%;
+  box-shadow: 0 0 14px rgba(214,0,0,0.28);
+  animation: particleMove 18s ease-in-out infinite alternate;
+}
+
+.hero-pattern span:nth-child(1) { top: 12%; right: 18%; animation-duration: 16s; }
+.hero-pattern span:nth-child(2) { top: 26%; right: 70%; animation-duration: 22s; }
+.hero-pattern span:nth-child(3) { top: 48%; right: 32%; animation-duration: 19s; }
+.hero-pattern span:nth-child(4) { top: 68%; right: 58%; animation-duration: 24s; }
+.hero-pattern span:nth-child(5) { top: 82%; right: 20%; animation-duration: 20s; }
+
+.hero-pattern span:nth-child(6) { top: 18%; right: 45%; animation-duration: 27s; background: rgba(0,0,0,0.18); }
+.hero-pattern span:nth-child(7) { top: 38%; right: 12%; animation-duration: 21s; background: rgba(0,0,0,0.16); }
+.hero-pattern span:nth-child(8) { top: 56%; right: 78%; animation-duration: 25s; background: rgba(0,0,0,0.14); }
+.hero-pattern span:nth-child(9) { top: 74%; right: 40%; animation-duration: 18s; background: rgba(0,0,0,0.16); }
+
+.hero-pattern span:nth-child(10) { top: 30%; right: 88%; animation-duration: 23s; }
+.hero-pattern span:nth-child(11) { top: 62%; right: 8%; animation-duration: 28s; }
+.hero-pattern span:nth-child(12) { top: 88%; right: 72%; animation-duration: 17s; }
+
+@keyframes technicalLines {
   from {
     transform: translate(-80px, -80px);
   }
@@ -222,6 +237,21 @@ body {
   }
 }
 
+@keyframes particleMove {
+  0% {
+    transform: translate(0, 0) scale(0.8);
+    opacity: 0.25;
+  }
+
+  50% {
+    opacity: 0.75;
+  }
+
+  100% {
+    transform: translate(-90px, 65px) scale(1.35);
+    opacity: 0.35;
+  }
+}
 .red-line {
   display: block;
   width: 60px;
