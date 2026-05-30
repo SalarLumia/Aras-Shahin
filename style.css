@@ -151,9 +151,9 @@ body {
   right: 0;
 }
 
-/* HERO */
+/* HERO SLIDER */
 
-.hero {
+.hero-slider {
   height: 650px;
   display: grid;
   grid-template-columns: 45% 55%;
@@ -228,19 +228,9 @@ body {
 .hero-pattern span:nth-child(12) { top: 88%; right: 72%; animation-duration: 17s; }
 
 @keyframes particleMove {
-  0% {
-    transform: translate(0, 0) scale(0.75);
-    opacity: 0.18;
-  }
-
-  50% {
-    opacity: 0.65;
-  }
-
-  100% {
-    transform: translate(-120px, 80px) scale(1.4);
-    opacity: 0.3;
-  }
+  0% { transform: translate(0, 0) scale(0.75); opacity: 0.18; }
+  50% { opacity: 0.65; }
+  100% { transform: translate(-120px, 80px) scale(1.4); opacity: 0.3; }
 }
 
 .red-line {
@@ -289,22 +279,74 @@ body {
   height: 100%;
   object-fit: cover;
   object-position: center;
+  opacity: 1;
+  transform: scale(1.06);
+  transition: opacity 0.8s ease, transform 1.2s ease;
 }
 
-.btn {
-  min-width: 170px;
-  display: inline-block;
-  padding: 15px 34px;
-  border-radius: 4px;
-  text-decoration: none;
-  text-align: center;
-  font-weight: 800;
-  font-size: 15px;
+.hero-image-panel img.changing {
+  opacity: 0;
+  transform: scale(1.1);
 }
 
-.btn.primary {
+.hero-image-panel img.active-zoom {
+  animation: kenBurns 7s ease forwards;
+}
+
+@keyframes kenBurns {
+  from {
+    transform: scale(1.08) translateX(0);
+  }
+  to {
+    transform: scale(1.02) translateX(-12px);
+  }
+}
+
+.hero-content.text-changing .hero-tag,
+.hero-content.text-changing h1,
+.hero-content.text-changing .hero-description,
+.hero-content.text-changing .btn {
+  opacity: 0;
+  transform: translateY(24px);
+}
+
+.hero-content .hero-tag,
+.hero-content h1,
+.hero-content .hero-description,
+.hero-content .btn {
+  transition: opacity 0.55s ease, transform 0.55s ease;
+}
+
+.hero-content h1 {
+  transition-delay: 0.08s;
+}
+
+.hero-description {
+  transition-delay: 0.16s;
+}
+
+.hero-content .btn {
+  transition-delay: 0.24s;
+}
+
+.hero-dots {
+  display: flex;
+  gap: 10px;
+  margin-top: 34px;
+}
+
+.dot {
+  width: 28px;
+  height: 4px;
+  border: 0;
+  background: #ccc;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.dot.active {
+  width: 42px;
   background: var(--red);
-  color: white;
 }
 
 /* TITLES */

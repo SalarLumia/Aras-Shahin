@@ -35,7 +35,8 @@
   </div>
 </header>
 
-<section class="hero">
+<section class="hero-slider">
+
   <div class="hero-text-panel">
     <div class="hero-pattern">
       <span></span><span></span><span></span><span></span>
@@ -45,24 +46,27 @@
 
     <div class="hero-content">
       <span class="red-line"></span>
-      <p class="hero-tag">تأمین ابزار صنعتی</p>
-
-      <h1>
-        قیمت به‌روز ابزارآلات صنعتی<br />
-        سریع، دقیق و منظم
-      </h1>
-
-      <p class="hero-description">
+      <p class="hero-tag" id="heroTag">تأمین ابزار صنعتی</p>
+      <h1 id="heroTitle">قیمت به‌روز ابزارآلات صنعتی<br>سریع، دقیق و منظم</h1>
+      <p class="hero-description" id="heroDescription">
         دسترسی آسان به دسته‌بندی محصولات، مشخصات فنی و قیمت‌های به‌روز برای مشتریان صنعتی.
       </p>
-
       <a href="#products" class="btn primary">محصولات</a>
+
+      <div class="hero-dots">
+        <button class="dot active" data-slide="0"></button>
+        <button class="dot" data-slide="1"></button>
+        <button class="dot" data-slide="2"></button>
+        <button class="dot" data-slide="3"></button>
+        <button class="dot" data-slide="4"></button>
+      </div>
     </div>
   </div>
 
   <div class="hero-image-panel">
-    <img src="assets-new/hero.jpg" alt="Industrial Tools" />
+    <img id="heroImage" src="assets-new/hero/hero-1.jpg" alt="Industrial Tools" />
   </div>
+
 </section>
 
 <section class="categories" id="products">
@@ -239,5 +243,6 @@
   کلیه حقوق برای ارس شاهین محفوظ است © 2025
 </div>
 
+<script src="script.js"></script>
 </body>
 </html>
