@@ -39,7 +39,6 @@ const heroTag = document.getElementById("heroTag");
 const heroTitle = document.getElementById("heroTitle");
 const heroDescription = document.getElementById("heroDescription");
 const heroContent = document.querySelector(".hero-content");
-const dots = document.querySelectorAll(".dot");
 
 function showSlide(index) {
   currentSlide = index;
@@ -55,9 +54,6 @@ function showSlide(index) {
     heroTitle.innerHTML = slide.title;
     heroDescription.textContent = slide.description;
 
-    dots.forEach(dot => dot.classList.remove("active"));
-    dots[index].classList.add("active");
-
     heroImage.classList.remove("active-zoom");
     void heroImage.offsetWidth;
     heroImage.classList.add("active-zoom");
@@ -67,25 +63,9 @@ function showSlide(index) {
   }, 450);
 }
 
-dots.forEach(dot => {
-  dot.addEventListener("click", () => {
-    const index = Number(dot.dataset.slide);
-    showSlide(index);
-    resetTimer();
-  });
-});
-
-let sliderTimer = setInterval(() => {
+setInterval(() => {
   const nextSlide = (currentSlide + 1) % slides.length;
   showSlide(nextSlide);
 }, intervalTime);
-
-function resetTimer() {
-  clearInterval(sliderTimer);
-  sliderTimer = setInterval(() => {
-    const nextSlide = (currentSlide + 1) % slides.length;
-    showSlide(nextSlide);
-  }, intervalTime);
-}
 
 showSlide(0);

@@ -188,8 +188,13 @@ body {
   position: relative;
   z-index: 5;
   direction: rtl;
+  width: 100%;
   max-width: 620px;
+  min-height: 500px;
   padding-left: 95px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .hero-pattern {
@@ -228,9 +233,19 @@ body {
 .hero-pattern span:nth-child(12) { top: 88%; right: 72%; animation-duration: 17s; }
 
 @keyframes particleMove {
-  0% { transform: translate(0, 0) scale(0.75); opacity: 0.18; }
-  50% { opacity: 0.65; }
-  100% { transform: translate(-120px, 80px) scale(1.4); opacity: 0.3; }
+  0% {
+    transform: translate(0, 0) scale(0.75);
+    opacity: 0.18;
+  }
+
+  50% {
+    opacity: 0.65;
+  }
+
+  100% {
+    transform: translate(-120px, 80px) scale(1.4);
+    opacity: 0.3;
+  }
 }
 
 .red-line {
@@ -254,6 +269,7 @@ body {
   margin: 0;
   font-weight: 900;
   color: #111;
+  min-height: 235px;
 }
 
 .hero-description {
@@ -261,10 +277,40 @@ body {
   font-size: 18px;
   line-height: 2;
   color: #666;
+  min-height: 76px;
 }
 
-.hero-content .btn {
-  margin-top: 32px;
+.hero-main-btn {
+  margin-top: 34px;
+  width: 220px;
+  height: 58px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 14px;
+  background: var(--red);
+  color: #fff;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 800;
+  text-decoration: none;
+  box-shadow: 0 12px 28px rgba(214, 0, 0, 0.22);
+  transition: all 0.3s ease;
+}
+
+.hero-main-btn span {
+  font-size: 22px;
+  line-height: 1;
+  transition: transform 0.3s ease;
+}
+
+.hero-main-btn:hover {
+  background: #b90000;
+  transform: translateY(-3px);
+}
+
+.hero-main-btn:hover span {
+  transform: translateY(4px);
 }
 
 .hero-image-panel {
@@ -304,16 +350,14 @@ body {
 
 .hero-content.text-changing .hero-tag,
 .hero-content.text-changing h1,
-.hero-content.text-changing .hero-description,
-.hero-content.text-changing .btn {
+.hero-content.text-changing .hero-description {
   opacity: 0;
   transform: translateY(24px);
 }
 
 .hero-content .hero-tag,
 .hero-content h1,
-.hero-content .hero-description,
-.hero-content .btn {
+.hero-content .hero-description {
   transition: opacity 0.55s ease, transform 0.55s ease;
 }
 
@@ -323,30 +367,6 @@ body {
 
 .hero-description {
   transition-delay: 0.16s;
-}
-
-.hero-content .btn {
-  transition-delay: 0.24s;
-}
-
-.hero-dots {
-  display: flex;
-  gap: 10px;
-  margin-top: 34px;
-}
-
-.dot {
-  width: 28px;
-  height: 4px;
-  border: 0;
-  background: #ccc;
-  cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.dot.active {
-  width: 42px;
-  background: var(--red);
 }
 
 /* TITLES */
@@ -597,7 +617,7 @@ h2 {
     display: none;
   }
 
-  .hero {
+  .hero-slider {
     height: auto;
     grid-template-columns: 1fr;
   }
@@ -618,10 +638,16 @@ h2 {
 
   .hero-content {
     padding: 80px 28px;
+    min-height: auto;
   }
 
   .hero-content h1 {
     font-size: 36px;
+    min-height: auto;
+  }
+
+  .hero-description {
+    min-height: auto;
   }
 
   .hero-image-panel {
