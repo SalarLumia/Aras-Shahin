@@ -85,17 +85,43 @@ const productsMenu = document.getElementById("productsMenu");
 const productsToggle = document.getElementById("productsToggle");
 
 if (productsMenu && productsToggle) {
-  productsToggle.addEventListener("click", function (event) {
+  const openMegaMenu = () => {
+    productsMenu.classList.add("open");
+    document.body.classList.add("mega-open");
+  };
+
+  const closeMegaMenu = () => {
+    productsMenu.classList.remove("open");
+    document.body.classList.remove("mega-open");
+  };
+
+  productsMenu.addEventListener("mouseenter", openMegaMenu);
+
+  productsMenu.addEventListener("mouseleave", () => {
+    if (!productsMenu.classList.contains("locked")) {
+      closeMegaMenu();
+    }
+  });
+
+  productsToggle.addEventListener("click", (event) => {
     event.preventDefault();
     event.stopPropagation();
-    productsMenu.classList.toggle("open");
+
+    productsMenu.classList.toggle("locked");
+
+    if (productsMenu.classList.contains("locked")) {
+      openMegaMenu();
+    } else {
+      closeMegaMenu();
+    }
   });
 
-  productsMenu.addEventListener("click", function (event) {
+  productsMenu.addEventListener("click", (event) => {
     event.stopPropagation();
   });
 
-  document.addEventListener("click", function () {
-    productsMenu.classList.remove("open");
+  document.addEventListener("click", () => {
+    productsMenu.classList.remove("locked");
+    closeMegaMenu();
   });
 }
