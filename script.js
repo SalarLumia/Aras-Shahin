@@ -128,14 +128,14 @@ if (productsMenu && productsToggle) {
 const categoryGrid = document.getElementById("categoryGrid");
 
 const categoryIcons = {
-  drilling: "⌁",
-  threading: "⌘",
-  turning: "▰",
-  holding: "◉",
-  measuring: "⌖",
-  cutting: "◌",
-  fluids: "◍",
-  lifting: "▣"
+  drilling: "assets-new/megamenu-icons/drilling.svg",
+  threading: "assets-new/megamenu-icons/threading.svg",
+  turning: "assets-new/megamenu-icons/turning.svg",
+  holding: "assets-new/megamenu-icons/holding.svg",
+  measuring: "assets-new/megamenu-icons/measuring.svg",
+  cutting: "assets-new/megamenu-icons/cutting.svg",
+  fluids: "assets-new/megamenu-icons/fluids.svg",
+  lifting: "assets-new/megamenu-icons/lifting.svg"
 };
 
 async function loadHomepageCategories() {
@@ -201,7 +201,9 @@ async function loadMegaMenu() {
 
       return `
         <a href="${category.CategoryPage}" class="mega-category ${activeClass}" data-category="${category.CategoryID}">
-          <span class="mega-icon">${icon}</span>
+          <span class="mega-icon">
+            <img src="${icon}" alt="${category.CategoryName}">
+          </span>
           ${category.CategoryName}
         </a>
       `;

@@ -209,8 +209,8 @@ body.mega-open .mega-menu-overlay {
 
   color: #333;
   text-decoration: none;
-  font-size: 13.5px;
-  font-weight: 700;
+  font-size: 13px !important;
+  font-weight: 450 !important;
 
   transition: all 0.2s ease;
 }
@@ -223,12 +223,15 @@ body.mega-open .mega-menu-overlay {
 
 .mega-icon {
   width: 22px;
-  height: 22px;
-  display: grid;
-  place-items: center;
-  font-size: 16px;
-  color: currentColor;
-  flex: 0 0 auto;
+  height: 22x;
+  flex: 0 0 28px;
+}
+
+.mega-icon img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
 }
 
 .mega-menu-content {
@@ -907,33 +910,52 @@ h2 {
 
 .featured-badge {
   position: absolute;
-  top: 16px;
-  right: 16px;
-  z-index: 3;
 
-  width: 76px;
-  min-height: 76px;
+  top: 8px;
+  left: 8px;
+  right: auto;
+
+  z-index: 5;
+
+  width: 40px;
+  height: 62px;
+
+  background: #ffffff;
+
+  border-radius: 14px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 4px;
+
+  gap: 2px;
+
+  box-shadow:
+    0 8px 24px rgba(0,0,0,.08),
+    0 2px 6px rgba(0,0,0,.04);
+
+  border: 1px solid rgba(0,0,0,.03);
 
   pointer-events: none;
 }
 
 .featured-badge img {
-  width: 48px;
-  height: 48px;
+  width: 34px;
+  height: 34px;
   object-fit: contain;
 }
 
 .featured-badge span {
-  font-size: 11px;
+  margin-top: 1px;
+
+  font-size: 10px;
   font-weight: 800;
-  line-height: 1.3;
+
+  line-height: 1;
+
   color: #D60000;
+
   text-align: center;
   white-space: nowrap;
 }
