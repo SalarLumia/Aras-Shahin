@@ -312,11 +312,26 @@ function getLoopItem(index) {
 }
 
 function createFeaturedCard(family) {
+  const badgeName = family.FeaturedBadge || "";
+  const badgeText = family.FeaturedBadgeText || "";
+
+  const badgePath = badgeName
+    ? `assets-new/feature-badge/${badgeName}.svg`
+    : "";
+
   return `
     <a class="featured-card" href="#">
-      <div class="featured-badge">
-        <img src="assets-new/ui/feature-badge.png" alt="">
-      </div>
+
+      ${
+        badgeName
+          ? `
+            <div class="featured-badge">
+              <img src="${badgePath}" alt="${badgeText}">
+              ${badgeText ? `<span>${badgeText}</span>` : ""}
+            </div>
+          `
+          : ""
+      }
 
       <div class="featured-image">
         <img
@@ -442,3 +457,56 @@ featuredNext?.addEventListener("click", moveFeaturedNext);
 featuredPrev?.addEventListener("click", moveFeaturedPrev);
 
 loadFeaturedFamilies();
+
+const contactOverlay = document.getElementById("contactOverlay");
+
+/* FLOATING CONTACT WIDGET */
+
+(() => {
+  const floatingContact = document.getElementById("floatingContact");
+  const contactBtn = document.getElementById("contactBtn");
+
+  if (!floatingContact || !contactBtn) return;
+
+  let isOpen = false;
+
+  function openContact() {
+    isOpen = true;
+    contactOverlay?.classList.add("active");
+    floatingContact.classList.remove("closing");
+    floatingContact.classList.add("active");
+  }
+
+  function closeContact() {
+    isOpen = false;
+    contactOverlay?.classList.remove("active");
+    floatingContact.classList.add("closing");
+    floatingContact.classList.remove("active");
+
+    setTimeout(() => {
+      floatingContact.classList.remove("closing");
+    }, 520);
+  }
+
+  contactBtn.addEventListener("click", function (event) {
+    event.stopPropagation();
+
+    if (isOpen) {
+      closeContact();
+    } else {
+      openContact();
+    }
+  });
+
+  document.addEventListener("click", function (event) {
+    if (isOpen && !floatingContact.contains(event.target)) {
+      closeContact();
+    }
+  });
+
+  document.addEventListener("keydown", function (event) {
+    if (event.key === "Escape" && isOpen) {
+      closeContact();
+    }
+  });
+})();
